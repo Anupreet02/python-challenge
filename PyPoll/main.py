@@ -16,6 +16,7 @@ with open (csv_path)as csv_file:
     csvreader = csv.reader (csv_file,delimiter =",")
     #read the header row first
     csv_header = next(csvreader)
+    #print(csv_header)
 
     #read through each row after header 
     for row in csvreader:
@@ -25,6 +26,7 @@ with open (csv_path)as csv_file:
 
         #calculate total votes
         total_votes +=1
+        #print (total_votes)
 
         # candidates count
         if Candidate not in candidates:
@@ -36,12 +38,15 @@ with open (csv_path)as csv_file:
 results = []
 for Candidate, votes in candidates.items():
     percentage = (votes/total_votes)*100
+    #print(percentage)
     results.append((Candidate,percentage,votes))
 
     #determine the winner 
     if votes > winning_count:
         winning_count = votes 
+        #print(votes)
         winner = Candidate
+        #print(winner)
 
 # Print the results
 print("Election Results")

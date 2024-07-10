@@ -18,6 +18,7 @@ with open (csv_path)as csv_file:
     csvreader = csv.reader (csv_file,delimiter=",")
     #read the header row first
     csv_header= next(csvreader)
+    #print(csv_header)
 
     #read through each row after header
     for row in csvreader:
@@ -28,9 +29,11 @@ with open (csv_path)as csv_file:
         dates.append(date)
         #calculate the number of total months
         total_months +=1
+        #print(total_months)
         
         #calculate the net total amount
         net_total += profit_losses
+        #print(net_total)
 
         #calculate monthly change
         if previous_profit_losses is not None:
@@ -42,12 +45,16 @@ with open (csv_path)as csv_file:
     
 #calculate the average change
 average_change = sum(changes)/len(changes) if changes else 0
+#print(average_change)
 
 #indentify the greatest increase and decrease 
 greatest_increase = max(changes) if changes else 0
+#print(greatest_increase)
 greatest_decrease = min(changes) if changes else 0
+#print(greatest_decrease)
 greatest_increase_date = dates[changes.index(greatest_increase) + 1] if changes else ''
 greatest_decrease_date = dates[changes.index(greatest_decrease) + 1] if changes else ''
+#print(greatest_decrease_date)
 
 # Print the analysis results
 print("Financial Analysis")
