@@ -4,8 +4,9 @@ The file contains two sub files named PyBank and PyPoll. Each sub files have the
 
 This is the Python Challenge that asks for the following:
 1.For PyBank:  budget_data.csv file is used to create python script that analyzes the records to calculate each of the following values.
-    1.The total number of months included in the dataset
 
+    1.The total number of months included in the dataset
+    
     2.The net total amount of "profit/losses" over the entire period
 
     3.The changes in "profit/losses" over the entire period, and then the average of those changes 
@@ -15,6 +16,7 @@ This is the Python Challenge that asks for the following:
     5.The greatest decrease in profits (date and amount) over the entire period.
 
 2.For PyPoll: election_data.csv file is used to create the python script that analyzes the votes and calculates each of the following values.
+
     1.The total number of votes caste
 
     2.A complete list of candidates who received votes
